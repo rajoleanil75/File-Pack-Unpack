@@ -41,7 +41,7 @@ public class Main extends Application {
                         stage.setTitle("File Pack Unpack");
                         Screen screen=Screen.getPrimary();
                         Rectangle2D bounds=screen.getVisualBounds();
-                        stage.setScene(new Scene(root,500,350));
+                        stage.setScene(new Scene(root,340,260));
                         stage.show();
                     }
                 }));

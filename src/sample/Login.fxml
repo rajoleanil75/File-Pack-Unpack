@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
@@ -10,7 +14,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <columnConstraints>
         <ColumnConstraints />
     </columnConstraints>
@@ -18,27 +22,32 @@
         <RowConstraints />
     </rowConstraints>
     <children>
-        <Pane prefHeight="318.0" prefWidth="340.0">
+        <Pane prefHeight="260.0" prefWidth="340.0">
             <children>
-                <Label layoutX="36.0" layoutY="164.0" prefHeight="30.0" prefWidth="98.0" text="Username">
+                <Label layoutX="37.0" layoutY="88.0" prefHeight="30.0" prefWidth="98.0" text="Username">
                     <font>
                         <Font size="18.0" />
                     </font>
                 </Label>
-                <Label layoutX="36.0" layoutY="212.0" prefHeight="30.0" prefWidth="98.0" text="Password">
+                <Label layoutX="37.0" layoutY="136.0" prefHeight="30.0" prefWidth="98.0" text="Password">
                     <font>
                         <Font size="18.0" />
                     </font>
                 </Label>
-                <TextField fx:id="uname" layoutX="155.0" layoutY="168.0" promptText="username" />
-                <PasswordField fx:id="pass" layoutX="156.0" layoutY="214.0" promptText="password" />
-                <Button fx:id="reset" layoutX="41.0" layoutY="273.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Reset" />
-                <Button fx:id="login" layoutX="185.0" layoutY="273.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Login" />
-                <Label fx:id="warning" alignment="CENTER" layoutX="10.0" layoutY="245.0" prefHeight="20.0" prefWidth="321.0" textFill="#ff0909">
+                <TextField fx:id="uname" layoutX="155.0" layoutY="91.0" promptText="username" />
+                <PasswordField fx:id="pass" layoutX="155.0" layoutY="138.0" promptText="password" />
+                <Button fx:id="reset" layoutX="42.0" layoutY="208.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Reset" />
+                <Button fx:id="login" layoutX="185.0" layoutY="208.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Login" />
+                <Label fx:id="warning" alignment="CENTER" layoutX="10.0" layoutY="177.0" prefHeight="20.0" prefWidth="321.0" textFill="#ff0909">
                     <font>
                         <Font size="14.0" />
                     </font>
                 </Label>
+            <Label layoutX="126.0" layoutY="14.0" prefHeight="30.0" prefWidth="89.0" text="Login">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
             </children>
         </Pane>
     </children>

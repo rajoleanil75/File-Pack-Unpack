@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.effect.Glow?>
@@ -9,11 +15,11 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <Pane prefHeight="300.0" prefWidth="400.0">
          <children>
-            <Label layoutX="70.0" layoutY="55.0" prefHeight="49.0" prefWidth="288.0" text="File Pack Unpacker">
+            <Label layoutX="74.0" layoutY="58.0" prefHeight="49.0" prefWidth="253.0" text="File Pack Unpack">
                <font>
                   <Font size="33.0" />
                </font>
@@ -23,7 +29,7 @@
                   <Glow level="0.67" />
                </effect>
             </ProgressBar>
-             <Label layoutX="40.0" layoutY="225.0" prefHeight="49.0" prefWidth="350.0" text="Designed and Developed By Anil Rajole">
+             <Label layoutX="39.0" layoutY="220.0" prefHeight="49.0" prefWidth="323.0" text="Designed and Developed By Anil Rajole">
                  <font>
                      <Font size="18.0" />
                  </font>
