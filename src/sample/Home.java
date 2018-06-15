@@ -1,5 +1,9 @@
 package sample;
 
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -8,8 +12,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
+import java.beans.EventHandler;
 import java.io.IOException;
+import java.util.Date;
 
 /**
  * Created by Anil on 15/06/2018
@@ -23,6 +30,14 @@ public class Home {
     @FXML
     private void initialize()
     {
+
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1),event -> {
+            Date date = new Date();
+            time.setText(String.valueOf(date));
+        }));
+        timeline.setCycleCount( Animation.INDEFINITE );
+        timeline.play();
+
         pack.setOnAction(event -> {
             Parent root = null;
             try {
@@ -31,11 +46,28 @@ public class Home {
                 e.printStackTrace();
             }
             Stage stage=new Stage();
-            stage.setTitle("File Pack Unpack");
+            stage.setTitle("File Pack");
             stage.setScene(new Scene(root,550,350));
             stage.setResizable(false);
             stage.show();
             ((Node)(event.getSource())).getScene().getWindow().hide();
+        });
+
+        unpack.setOnAction(event -> {
+            try
+            {
+                Parent root = null;
+                root = FXMLLoader.load(Unpack.class.getResource("unpack.fxml"));
+                Stage stage = new Stage();
+                stage.setTitle("File Pack");
+                stage.setScene(new Scene(root, 550, 350));
+                stage.setResizable(false);
+                stage.show();
+                ((Node)(event.getSource())).getScene().getWindow().hide();
+            }catch (Exception e)
+            {
+                e.printStackTrace();
+            }
         });
     }
 }

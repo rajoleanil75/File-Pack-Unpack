@@ -22,7 +22,7 @@
         <RowConstraints />
     </rowConstraints>
     <children>
-        <Pane prefHeight="260.0" prefWidth="340.0">
+        <Pane prefHeight="280.0" prefWidth="340.0">
             <children>
                 <Label layoutX="37.0" layoutY="88.0" prefHeight="30.0" prefWidth="98.0" text="Username">
                     <font>
@@ -48,6 +48,10 @@
                   <Font size="32.0" />
                </font>
             </Label>
+            <Label fx:id="chance" alignment="CENTER_RIGHT" layoutX="135.0" layoutY="246.0" prefHeight="20.0" prefWidth="188.0" textFill="#f22e2e">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
             </children>
         </Pane>
     </children>

@@ -15,9 +15,9 @@
    <children>
       <Pane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <Label fx:id="time" layoutX="315.0" layoutY="31.0" prefHeight="28.0" prefWidth="221.0" text="Time:" textFill="#eeab0f">
+            <Label fx:id="time" layoutX="318.0" layoutY="31.0" prefHeight="28.0" prefWidth="218.0" textFill="#eeab0f">
                <font>
-                  <Font size="19.0" />
+                  <Font size="17.0" />
                </font>
             </Label>
             <Label layoutX="93.0" layoutY="97.0" prefHeight="60.0" prefWidth="364.0" text="Packing &amp; Unpacking" textFill="#11c5fc">

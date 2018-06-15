@@ -11,6 +11,8 @@ import javafx.scene.control.PasswordField;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 
+import static java.lang.System.exit;
+
 /**
  * Created by Anil on 15/06/2018
  */
@@ -22,7 +24,9 @@ public class Login {
     @FXML
     private PasswordField pass;
     @FXML
-    private Label warning;
+    private Label warning, chance;
+
+    private static int cnt = 3;
 
     @FXML
     private void initialize()
@@ -34,11 +38,14 @@ public class Login {
         });
         login.setOnAction((event) ->
         {
+            if(cnt == 0)
+                exit(0);
             String name=uname.getText();
             String password= pass.getText();
             if (name.isEmpty())
             {
                 warning.setText("Please enter Username..!!");
+
             }
             else if(password.isEmpty())
             {
@@ -62,6 +69,8 @@ public class Login {
                     else
                     {
                         warning.setText("Plese enter valid username and password");
+                        chance.setText("Remaining chances : "+cnt);
+                        cnt--;
                     }
                 }
                 catch (Exception e)

@@ -1,14 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="sample.Pack"
-            prefHeight="550.0" prefWidth="350.0">
-
-</AnchorPane>
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Pack">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Pane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label layoutX="185.0" layoutY="14.0" text="File Pack" textFill="#1e98d6">
+               <font>
+                  <Font name="Segoe Print" size="40.0" />
+               </font>
+            </Label>
+            <Label layoutX="119.0" layoutY="121.0" text="Select Directory">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="154.0" layoutY="206.0" text="Target File">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Button fx:id="dname" layoutX="312.0" layoutY="123.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="104.0" text="Select Directory" />
+            <Label fx:id="sname" layoutX="312.0" layoutY="155.0" prefHeight="28.0" prefWidth="222.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tname" layoutX="312.0" layoutY="205.0" prefHeight="25.0" prefWidth="161.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Button fx:id="cancel" cancelButton="true" layoutX="150.0" layoutY="278.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="96.0" text="Cancel">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="pack" cancelButton="true" layoutX="316.0" layoutY="278.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="96.0" text="Pack">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Label fx:id="warning" alignment="CENTER" layoutX="92.0" layoutY="245.0" prefHeight="25.0" prefWidth="367.0" textFill="#d70e0e">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</GridPane>
