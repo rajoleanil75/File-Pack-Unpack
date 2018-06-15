@@ -25,7 +25,7 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, 400, 300));
         primaryStage.show();
         Timeline timeline = new Timeline();
-        timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(7),
+        timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(2),
                 new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(ActionEvent event) {
@@ -38,9 +38,8 @@ public class Main extends Application {
                             e.printStackTrace();
                         }
                         Stage stage=new Stage();
+                        stage.setResizable(false);
                         stage.setTitle("File Pack Unpack");
-                        Screen screen=Screen.getPrimary();
-                        Rectangle2D bounds=screen.getVisualBounds();
                         stage.setScene(new Scene(root,340,260));
                         stage.show();
                     }

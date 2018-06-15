@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Home">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Pane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label fx:id="time" layoutX="315.0" layoutY="31.0" prefHeight="28.0" prefWidth="221.0" text="Time:" textFill="#eeab0f">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="93.0" layoutY="97.0" prefHeight="60.0" prefWidth="364.0" text="Packing &amp; Unpacking" textFill="#11c5fc">
+               <font>
+                  <Font name="Segoe Print" size="33.0" />
+               </font>
+            </Label>
+            <Button fx:id="pack" layoutX="113.0" layoutY="221.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="116.0" text="Pack">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="unpack" layoutX="315.0" layoutY="221.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="116.0" text="Unpack">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</GridPane>
