@@ -13,7 +13,11 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipInputStream;
 
 /**
  * Created by Anil on 15/06/2018
@@ -23,6 +27,40 @@ public class Unpack {
     private Button dname, fname, cancel, unpack;
     @FXML
     private Label dnamelbl, fnamelbl, warning;
+
+    private void unZIp(String zipFilePath, String destDir)
+    {
+        File dir = new File(destDir);
+        if(!dir.exists())
+            dir.mkdir();
+        FileInputStream fis;
+        byte[] buffer = new byte[1024];
+        try {
+            fis = new FileInputStream(zipFilePath);
+            ZipInputStream zis = new ZipInputStream(fis);
+            ZipEntry ze = zis .getNextEntry();
+            while (ze != null)
+            {
+                String fileName = ze.getName();
+                File newFile = new File(destDir + File.separator + fileName);
+                new File(newFile.getParent()).mkdirs();
+                FileOutputStream fos = new FileOutputStream(newFile);
+                int len;
+                while ((len = zis.read(buffer)) > 0)
+                    fos.write(buffer, 0 ,len);
+                fos.close();
+                zis.closeEntry();
+                ze = zis.getNextEntry();
+            }
+            zis.closeEntry();
+            zis.close();
+            fis.close();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
 
     @FXML
     private void initialize()
@@ -80,8 +118,9 @@ public class Unpack {
             else
             {
                 warning.setText("");
+                unZIp(fnamelbl.getText(), dnamelbl.getText());
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("File Pack Successful");
+                alert.setTitle("File Unpack Successful");
                 alert.setHeaderText(null);
                 alert.setContentText("File Unpack Successful\n Location :"+dnamelbl.getText());
                 alert.showAndWait();
