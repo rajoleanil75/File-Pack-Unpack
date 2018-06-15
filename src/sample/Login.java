@@ -68,7 +68,7 @@ public class Login {
                     }
                     else
                     {
-                        warning.setText("Plese enter valid username and password");
+                        warning.setText("Please enter valid username and password");
                         chance.setText("Remaining chances : "+cnt);
                         cnt--;
                     }
