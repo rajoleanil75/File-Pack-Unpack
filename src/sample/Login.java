@@ -55,7 +55,7 @@ public class Login {
             {
                 try
                 {
-                    if(name.equals("admin") && password.equals("password"))
+                    if(name.equals("admin") && password.equals("pass"))
                     {
                         Parent root;
                         root= FXMLLoader.load(Home.class.getResource("home.fxml"));

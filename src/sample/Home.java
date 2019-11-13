@@ -16,6 +16,9 @@ import javafx.util.Duration;
 
 import java.beans.EventHandler;
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 /**
@@ -32,11 +35,17 @@ public class Home {
     {
 
         Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1),event -> {
-            Date date = new Date();
-            time.setText(String.valueOf(date));
+            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("hh:mm:ss a");
+            LocalDateTime now = LocalDateTime.now();
+
+            //please put label name instead of time below
+            time.setText(dtf.format(now));
         }));
         timeline.setCycleCount( Animation.INDEFINITE );
         timeline.play();
+
+
+
 
         pack.setOnAction(event -> {
             Parent root = null;
